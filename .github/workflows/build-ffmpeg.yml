@@ -26,11 +26,11 @@ jobs:
       # A file, directory or wildcard pattern that describes what to upload
         path: ${GITHUB_WORKSPACE}/build/
       # The desired behavior if no files are found using the provided path.
-      Available Options:
-      error: 
+  #       Available Options:
+  #       error: 
 
-      if-no-files-found: # optional, default is warn
-      # Duration after which artifact will expire in days. 0 means using default retention.
-  #Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
+  #     if-no-files-found: # optional, default is warn
+  #     # Duration after which artifact will expire in days. 0 means using default retention.
+  # #Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
 
-      retention-days: # optional
+  #     retention-days: # optional
