@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Docker Build Image
         run: |
-          docker run --rm -v {GITHUB_WORKSPACE}:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64 -android=24 -x264 -binutils=llvm" ffmpegarm64:latest
+          docker run --rm -v ${GITHUB_WORKSPACE}:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64 -android=24 -x264 -binutils=llvm" ffmpegarm64:latest
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.2
