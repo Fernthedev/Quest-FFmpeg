@@ -17,7 +17,9 @@ jobs:
         submodules: 'true'
     
     - name: Run Docker Build Image
-      run:  docker run --rm -v ${GITHUB_WORKSPACE}/:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64 -android=24" javernaut/ffmpeg-android-maker
+      run:  |
+        cd tools/docker
+        docker run --rm -v ${GITHUB_WORKSPACE}/:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64 -android=24" javernaut/ffmpeg-android-maker
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.2
