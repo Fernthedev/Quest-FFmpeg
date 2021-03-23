@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Docker Build Image
         run: |
-          docker run --rm -v ${GITHUB_WORKSPACE}:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64 -android=24 -x264 -binutils=llvm" ffmpegarm64:latest
+          docker run --rm -v ${GITHUB_WORKSPACE}:/mnt/ffmpeg-android-maker -e FAM_ARGS="-abis=arm64-v8a -android=24 -x264 -binutils=llvm" ffmpegarm64:latest
           echo ${GITHUB_WORKSPACE}
           ls ${GITHUB_WORKSPACE}
 
